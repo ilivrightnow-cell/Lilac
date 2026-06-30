@@ -1,0 +1,9 @@
+{
+  "fields": [
+    { "field": "id", "type": "number", "required": true },
+    { "field": "followerId", "type": "number", "required": true },
+    { "field": "followingId", "type": "number", "required": true },
+    { "field": "createdAt", "type": "string" }
+  ],
+  "data": []
+}
