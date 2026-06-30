@@ -1,0 +1,10 @@
+{
+  "fields": [
+    { "field": "id", "type": "number", "required": true },
+    { "field": "postId", "type": "number", "required": true },
+    { "field": "userId", "type": "number", "required": true },
+    { "field": "text", "type": "string" },
+    { "field": "createdAt", "type": "string" }
+  ],
+  "data": []
+}
