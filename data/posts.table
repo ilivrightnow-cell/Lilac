@@ -1,0 +1,13 @@
+{
+  "fields": [
+    { "field": "id", "type": "number", "required": true },
+    { "field": "userId", "type": "number", "required": true },
+    { "field": "text", "type": "string" },
+    { "field": "image", "type": "string" },
+    { "field": "likes", "type": "string" },
+    { "field": "createdAt", "type": "string" }
+  ],
+  "data": [
+    { "id": 1, "userId": 1, "text": "Welcome to the feed! This is post #1 from user #1. Tag friends with @username and topics with #hashtag. Try the doomscroll tab 👌", "image": "", "likes": "", "createdAt": "2026-06-29T22:00:00Z" }
+  ]
+}
