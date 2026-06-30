@@ -1,0 +1,15 @@
+{
+  "fields": [
+    { "field": "id", "type": "number", "required": true },
+    { "field": "username", "type": "string", "required": true },
+    { "field": "displayName", "type": "string" },
+    { "field": "password", "type": "string" },
+    { "field": "bio", "type": "string" },
+    { "field": "avatar", "type": "string" },
+    { "field": "verified", "type": "number" },
+    { "field": "createdAt", "type": "string" }
+  ],
+  "data": [
+    { "id": 1, "username": "iliv", "displayName": "Iliv", "password": "owner", "bio": "Founder · ID #1 · I can verify accounts ✓", "avatar": "", "verified": 1, "createdAt": "2026-06-29T22:00:00Z" }
+  ]
+}
