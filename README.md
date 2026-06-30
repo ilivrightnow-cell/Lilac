@@ -42,29 +42,20 @@ And somewhere, in a dim room, Iliv is still scrolling. Still watching. Still #1.
 | 🔥 Doomscroll | Infinite-scroll feed of every post, ever |
 | 🔍 Explore | Search, trending tags, user directory |
 | 📤 Share | Native share API or clipboard fallback |
-| ��️ **Verify** | Only user #1 can grant/revoke the lilac badge ✓ |
+| �️ **Verify** | Only user #1 can grant/revoke the lilac badge ✓ |
 
----
-
-## 🔑 DEFAULT CREDENTIALS
-
-| Username | Password | Role |
-|---|---|---|
-| `iliv` | `owner` | **User #1** ℔ Owner, Root Verifier |
-
-Anyone else who signs up gets ID #2, #3, #4…
 ---
 
 ## 🧡 DATA MODEL
 
 Four `.table` files (JSON-based) power the app:
 
-|File|Purpose|
+| File | Purpose |
 |---|---|
-|`/social/users.table`| User accounts with auto-incrementing IDs |
-|`/social/posts.table` Posts (text, images, likes, timestamps) |
-|`/social/comments.table`| Comments on posts |
-|`/social/follows.table`| Follower / following relationships |
+| `/data/users.table` | User accounts with auto-incrementing ids |
+| `/data/posts.table` | Posts (@mentions, #hashtags, image URLs, likes) |
+| `/data/comments.table` | Comments on posts |
+| `/data/follows.table` | Follower / following relationships |
 
 ---
 
@@ -81,7 +72,7 @@ To run standalone, replace these with your own backend (any SQL database + file 
 
 ---
 
-## 🦨 TECH STACK
+## 🩨 TECH STACK
 
 - React (hooks, functional components)
 - Tailwind CSS (custom Zaro palette: lilac, amber, teal, coral, green)
@@ -97,7 +88,7 @@ Lilac/
 ├── src/
 │   └── App.jsx          # Full React component (~33KB)
 ├── data/
-│   ├── users.table      # User accounts schema + seed data
+│   └── users.table      # User accounts schema + seed data
 │   └── posts.table      # Posts schema + seed data
 │   └── comments.table   # Comments schema
 │   └── follows.table     # Follows schema
