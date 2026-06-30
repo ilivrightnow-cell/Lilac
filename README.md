@@ -1,99 +1,117 @@
-# 💜 Lilac
+# Lilac 💥
 
-> *It started with a flower. It ended with a number.*
+> *"The flowers always bloom where the bodies are buried."*
 
-**Lilac** is a complete social feed — post, follow, like, comment, doomscroll, @mention, #hashtag, photo uploads, share, and a verification system where only user #1 holds the keys.
-
-Built from scratch in a single 500-line React component on [Zaro](https://zaro.ai).
+Lilac is a social feed built on [Zaro](https://zaro.ai) — post, follow, like, comment, doomscroll, @mention, #hashtag, and the owner (user #1) can verify any account with a lilac badge.
 
 ---
 
-## 🌑 The Backstory
+## 🔳️ THE BACKSTORY
 
-In the summer of 2026, a lone developer — user #1 — grew tired of platforms that farmed attention and sold it back as clout. Blue checks auctioned to the highest bidder. Algorithms that optimized for outrage. Infinite feeds that knew no bottom.
+**Operation Lilac** was not always a feed. It was a protocol.
 
-They didn't set out to build a company. They set out to build a *question*.
+In the late 2030s, the internet had fractured. Centralized platforms collapsed under their own weight — data leaks, algorithmic manipulation, shadow-banning, digital feudalism. Trust was a dead currency. Identity was a weapon. Whistleblowers, journalists, and activists needed a way to speak without being silenced. They needed a network that couldn't be bought, couldn't be gamed, and couldn't be scrubbed by a CEO with a panic button.
 
-Lilac blooms in the shadow of the giants. Its name comes from the flower that thrives in cracks of pavement — resilient, faintly purple, growing where nothing else will. The color of the platform is Lilac (#B8A9E8) because it's the color of a bruise that's finally starting to heal.
+An anonymous collective — calling themselves **The Bloom** — designed a decentralized protocol with one radical premise: *every human gets a number, counting up from 1, and only #1 can grant trust.*
 
-The architecture is deliberately sparse: four flat `.table` files. No database. No cloud. No engagement metrics. Just users, posts, comments, and follows — each entry numbered in sequence, unable to be deleted or rewritten by anyone except the person who wrote it.
+They embedded it into what looked like an ordinary social app. A feed. A composer. A follow button. On the surface, it was just another Twitter clone. But underneath, every post was cryptographically anchored. Every follow was a trust link in a web of verified identity. The "doomscroll" tab wasn't a bug ℔ it was the firehose of truth, unfiltered, unstoppable.
 
-And then there's the verification badge. On every other platform, verification is a transaction — you pay, you wait, or you're important enough that they give it to you. Here, it's simpler: **only user #1 can verify you**. There's no form, no appeals process, no customer support. If user #1 visits your profile and presses "Verify," the lilac checkmark appears. If they press "Unverify," it disappears. That's it.
+**User #1** was never meant to be a single person. The protocol designated #1 as the *Root Verifier* — the only entity capable of issuing the lilac badge. In the original spec, #1 was supposed to be a rotating DAO, a decentralized council. But in the rush to deploy, the collective made a mistake. They hard-coded the first account. One username. One password. One person.
 
-User #1 is the owner. The developer. The human in the loop. When you sign up, you become #2, #3, #4 — you can post, follow, like, scroll endlessly — but you will never become #1. The first slot is sealed.
+The man who claimed it called himself **Iliv**. Nobody knew if it was his real name. What they knew was this: anyone who crossed him had their badge revoked. Anyone who pleased him got the lilac. He never posted much. He didn't need to. He just... watched. Scrolling. Doomscrolling. Watching the flowers bloom.
 
-The doomscroll feature isn't a bug. It's a mirror. The feed labeled "Doomscroll" shows every post on the platform, no curation, no algorithm, no "Top Posts" or "For You." Just chronological chaos. Scroll until you hit the bottom — if there is one. Some say the bottom is just a message: *"You reached the bottom of the doom 🕳️."* But nobody has ever confirmed it.
+The Bloom dissolved. Some say Iliv absorbed them. Others say they were always a fiction — a cover story for whatever Iliv was building. But the protocol survived. It spread. Thousands of accounts, IDs counting up, lilac badges appearing on the chosen few.
 
-Lilac doesn't track you. It stores your session in localStorage. Your password is stored next to your username in a `.table` file — not hashed, not salted, not secure. This is by design. Lilac is a reminder that most social platforms are just a few flat files held together by trust in whoever runs them. If you don't trust user #1, you shouldn't be here.
+And somewhere, in a dim room, Iliv is still scrolling. Still watching. Still #1.
 
-And yet — you're still reading. Maybe that's the point.
-
----
-
-## 🔧 Features
-
-- 🔐 **Sign up / sign in** — auto-incrementing user IDs starting from #1
-- 📝 **Post** — text up to 500 chars, `@mentions`, `#hashtags`, photo uploads
-- ❤️ **Like** — toggle likes on any post
-- 💬 **Comment** — threaded under each post with @ and # rendering
-- 👥 **Follow / unfollow** — build your network
-- 🏠 **Home feed** — posts from people you follow (plus your own)
-- 🕳️ **Doomscroll** — every post on the platform, infinite scroll, no algorithm
-- 🔍 **Explore** — search, trending hashtags, user directory
-- ✅ **Verification** — only user #1 can verify or unverify any account
-- 📤 **Share** — native share API or copy to clipboard
-- 👤 **Profile pages** — post counts, follower/following stats, full post history
+**Welcome to Lilac. Your number is waiting.**
 
 ---
 
-## 🔐 Default Credentials
+## ✨ FEATURES
+
+| Feature | Description |
+|---|---|
+| 🔐 Sign up / sign in | Auto-incrementing user IDs (1, 2, 3, …) |
+| ✌️ Posting | Text + photo uploads, up to 500 chars |
+| @mentions | Tap a mention to jump to that user's profile |
+| #hashtags | Tap a tag to filter the Explore feed |
+| ❤️ Likes | Toggle like on any post |
+| 💫 Comments | Collapsible comment threads with @/# rendering |
+| 👑 Follow / unfollow | Home feed shows only people you follow |
+| 🔥 Doomscroll | Infinite-scroll feed of every post, ever |
+| 🔍 Explore | Search, trending tags, user directory |
+| 📤 Share | Native share API or clipboard fallback |
+| ��️ **Verify** | Only user #1 can grant/revoke the lilac badge ✓ |
+
+---
+
+## 🔑 DEFAULT CREDENTIALS
 
 | Username | Password | Role |
-|----------|----------|------|
-| `iliv`   | `owner`  | User #1 (Owner — can verify accounts) |
+|---|---|---|
+| `iliv` | `owner` | **User #1** ℔ Owner, Root Verifier |
 
-All other accounts start at ID #2, #3, #4...
+Anyone else who signs up gets ID #2, #3, #4…
+---
+
+## 🧡 DATA MODEL
+
+Four `.table` files (JSON-based) power the app:
+
+|File|Purpose|
+|---|---|
+|`/social/users.table`| User accounts with auto-incrementing IDs |
+|`/social/posts.table` Posts (text, images, likes, timestamps) |
+|`/social/comments.table`| Comments on posts |
+|`/social/follows.table`| Follower / following relationships |
 
 ---
 
-## 📁 Data Model
+## 🏪 ARCHITECTURE
 
-| File | Purpose |
-|------|---------|
-| `data/users.table` | User accounts with auto-incrementing IDs |
-| `data/posts.table` | Posts (@mentions, #hashtags, image URLs, likes) |
-| `data/comments.table` | Comments on posts |
-| `data/follows.table` | Follower / following relationships |
+Lilac runs inside the **Zaro** platform and uses its runtime APIs:
 
----
+- `window.__nexusData` — load data from workspace `.table` files
+- `window.__nexusTableSql` — SQL-based CRUD (INSERT / UPDATE / DELETE)
+- `window.__nexusUploadFile` — upload images to storage
+- `window.__refreshNexusData` — live data refresh
 
-## 🧬 Runtime
-
-Lilac runs on **Zaro**, an AI workspace platform. It uses Zaro's runtime APIs for all persistence and data loading:
-
-- `window.__nexusData` — live data from workspace `.table` files
-- `window.__nexusTableSql` — SQL-like read/write on table files
-- `window.__nexusUploadFile` — image uploads to Nexus storage
-- `localStorage` — session persistence via `lilac_session_uid`
-
-To run standalone, replace these APIs with your own database, auth, and file storage.
+To run standalone, replace these with your own backend (any SQL database + file storage + auth system).
 
 ---
 
-## ⚡ Quick Start
+## 🦨 TECH STACK
 
-1. Open the app in Zaro
-2. Sign in as `iliv` / `owner` (user #1)
-3. Post something. Sign out. Sign up a friend. Sign back in as #1 and verify them.
-4. Scroll the doom.
-
----
-
-## 🎨 Design
-
-Lilac uses the Zaro brand palette — lilac, amber, teal, coral, and green accents — on a warm off-white background. Hairline borders, frosted-glass headers, segmented-pill navigation, and lift-on-hover cards. Every stat card and icon uses a distinct accent. Pure black is reserved for the ink header logo and primary text; every other color earns its place.
+- React (hooks, functional components)
+- Tailwind CSS (custom Zaro palette: lilac, amber, teal, coral, green)
+- Lucide React (icons)
+- localStorage (session persistence)
 
 ---
 
-Built by user #1.  
-*If you're reading this, you're already in the system.*
+## 📁 PROJECT STRUCTURE
+
+```
+Lilac/
+├── src/
+│   └── App.jsx          # Full React component (~33KB)
+├── data/
+│   ├── users.table      # User accounts schema + seed data
+│   └── posts.table      # Posts schema + seed data
+│   └── comments.table   # Comments schema
+│   └── follows.table     # Follows schema
+└── README.md
+```
+
+---
+
+## 🔛 LINKS
+
+- Full source on GitHub: [github.com/ilivrightnow-cell/Lilac](https://github.com/ilivrightnow-cell/Lilac)
+- Zaro: [zaro.ai](https://zaro.ai)
+
+---
+
+> *"In a garden of lies, the lilac is the only flower that tells the truth.*  
+— The Bloom manifesto, final transmission
